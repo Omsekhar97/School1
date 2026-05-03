@@ -37,7 +37,7 @@
             padding: 20px;
         }
 
-        .student-list {
+        /* .student-list {
             border-right: 1px solid #ddd;
             height: 100%;
             padding-right: 20px;
@@ -52,6 +52,30 @@
 
         .progress-card {
             display: none;
+        }
+
+        .progress-card.active {
+            display: block;
+        } */
+
+        .student-group {
+            display: none;
+            margin-left: 15px;
+            margin-bottom: 15px;
+        }
+
+        .student-btn {
+            width: 100%;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        .progress-card {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #fff;
         }
 
         .progress-card.active {
@@ -86,7 +110,8 @@
                     <a href="about.html" class="nav-item nav-link">About Us</a>
                     <a href="classes.html" class="nav-item nav-link">Classes</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">School Information</a>
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">School
+                            Information</a>
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
                             <a href="facility.html" class="dropdown-item">School Facilities</a>
                             <a href="team.html" class="dropdown-item">Popular Teachers</a>
@@ -219,142 +244,323 @@
 
                 <div class="container-fluid">
                     <div class="row">
-                        <!-- Student List -->
+
+                        <!-- LEFT SIDE -->
                         <div class="col-md-3 student-list">
-                            <h4>Student List</h4>
-                            <button class="btn btn-outline-primary" onclick="showStudent('student1')">Krisha</button>
-                            <button class="btn btn-outline-primary" onclick="showStudent('student2')">Gowthami</button>
-                            <button class="btn btn-outline-primary" onclick="showStudent('student3')">Anu</button>
-                            <button class="btn btn-outline-primary" onclick="showStudent('student4')">Chinni</button>
-                            <button class="btn btn-outline-primary" onclick="showStudent('student5')">Jyoshna</button>
-                            <!-- Add more students as needed -->
+
+                            <h4 class="mb-3">Class List</h4>
+
+                            <!-- CLASS 1 -->
+                            <button class="btn btn-outline-primary w-100 mb-2" onclick="showClass('class1Students')">
+                                Class 1
+                            </button>
+
+                            <div id="class1Students" class="student-group">
+
+                                <button class="btn btn-outline-secondary student-btn" onclick="showStudent('student1')">
+                                    Aarav
+                                </button>
+
+                                <button class="btn btn-outline-secondary student-btn" onclick="showStudent('student2')">
+                                    Diya
+                                </button>
+
+                            </div>
+
+
+                            <!-- CLASS 2 -->
+                            <button class="btn btn-outline-primary w-100 mb-2" onclick="showClass('class2Students')">
+                                Class 2
+                            </button>
+
+                            <div id="class2Students" class="student-group">
+
+                                <button class="btn btn-outline-secondary student-btn" onclick="showStudent('student3')">
+                                    Rahul
+                                </button>
+
+                                <button class="btn btn-outline-secondary student-btn" onclick="showStudent('student4')">
+                                    Sneha
+                                </button>
+
+                            </div>
+
+
+                            <!-- CLASS 3 -->
+                            <button class="btn btn-outline-primary w-100 mb-2" onclick="showClass('class3Students')">
+                                Class 3
+                            </button>
+
+                            <div id="class3Students" class="student-group">
+
+                                <button class="btn btn-outline-secondary student-btn" onclick="showStudent('student5')">
+                                    Kiran
+                                </button>
+
+                                <button class="btn btn-outline-secondary student-btn" onclick="showStudent('student6')">
+                                    Meena
+                                </button>
+
+                            </div>
+
+
+                            <!-- CLASS 4 -->
+                            <button class="btn btn-outline-primary w-100 mb-2" onclick="showClass('class4Students')">
+                                Class 4
+                            </button>
+
+                            <div id="class4Students" class="student-group">
+
+                                <button class="btn btn-outline-secondary student-btn" onclick="showStudent('student7')">
+                                    Arjun
+                                </button>
+
+                                <button class="btn btn-outline-secondary student-btn" onclick="showStudent('student8')">
+                                    Kavya
+                                </button>
+
+                            </div>
+
+
+                            <!-- CLASS 5 -->
+                            <button class="btn btn-outline-primary w-100 mb-2" onclick="showClass('class5Students')">
+                                Class 5
+                            </button>
+
+                            <div id="class5Students" class="student-group">
+
+                                <button class="btn btn-outline-secondary student-btn" onclick="showStudent('student9')">
+                                    Nikhil
+                                </button>
+
+                                <button class="btn btn-outline-secondary student-btn"
+                                    onclick="showStudent('student10')">
+                                    Pooja
+                                </button>
+
+                            </div>
+
+
+                            <!-- CLASS 6 -->
+                            <button class="btn btn-outline-primary w-100 mb-2" onclick="showClass('class6Students')">
+                                Class 6
+                            </button>
+
+                            <div id="class6Students" class="student-group">
+
+                                <button class="btn btn-outline-secondary student-btn"
+                                    onclick="showStudent('student11')">
+                                    Anu
+                                </button>
+
+                                <button class="btn btn-outline-secondary student-btn"
+                                    onclick="showStudent('student12')">
+                                    Chinni
+                                </button>
+
+                            </div>
+
+
+                            <!-- CLASS 7 -->
+                            <button class="btn btn-outline-primary w-100 mb-2" onclick="showClass('class7Students')">
+                                Class 7
+                            </button>
+
+                            <div id="class7Students" class="student-group">
+
+                                <button class="btn btn-outline-secondary student-btn"
+                                    onclick="showStudent('student13')">
+                                    Jyoshna
+                                </button>
+
+                                <button class="btn btn-outline-secondary student-btn"
+                                    onclick="showStudent('student14')">
+                                    Krisha
+                                </button>
+
+                            </div>
+
+
+                            <!-- CLASS 8 -->
+                            <button class="btn btn-outline-primary w-100 mb-2" onclick="showClass('class8Students')">
+                                Class 8
+                            </button>
+
+                            <div id="class8Students" class="student-group">
+
+                                <button class="btn btn-outline-secondary student-btn"
+                                    onclick="showStudent('student15')">
+                                    Gowthami
+                                </button>
+
+                                <button class="btn btn-outline-secondary student-btn"
+                                    onclick="showStudent('student16')">
+                                    Sandeep
+                                </button>
+
+                            </div>
+
+
+                            <!-- CLASS 9 -->
+                            <button class="btn btn-outline-primary w-100 mb-2" onclick="showClass('class9Students')">
+                                Class 9
+                            </button>
+
+                            <div id="class9Students" class="student-group">
+
+                                <button class="btn btn-outline-secondary student-btn"
+                                    onclick="showStudent('student17')">
+                                    Harsha
+                                </button>
+
+                                <button class="btn btn-outline-secondary student-btn"
+                                    onclick="showStudent('student18')">
+                                    Lakshmi
+                                </button>
+
+                            </div>
+
+
+                            <!-- CLASS 10 -->
+                            <button class="btn btn-outline-primary w-100 mb-2" onclick="showClass('class10Students')">
+                                Class 10
+                            </button>
+
+                            <div id="class10Students" class="student-group">
+
+                                <button class="btn btn-outline-secondary student-btn"
+                                    onclick="showStudent('student19')">
+                                    Varun
+                                </button>
+
+                                <button class="btn btn-outline-secondary student-btn"
+                                    onclick="showStudent('student20')">
+                                    Keerthi
+                                </button>
+
+                            </div>
+
                         </div>
 
-                        <!-- Progress Cards -->
+
+
+                        <!-- RIGHT SIDE -->
                         <div class="col-md-9">
-                            <div id="student1" class="progress-card active">
-                                <h3> Krisha - Progress Card</h3>
-                                <p><strong>Grade:</strong> 7</p>
-                                <p><strong>Semester:</strong> 1</p>
+
+                            <!-- DEFAULT MESSAGE -->
+                            <div id="defaultMessage">
+                                <h3 class="text-primary">
+                                    Select Class and Student
+                                </h3>
+                            </div>
+
+
+                            <!-- SAMPLE STUDENT CARD -->
+                            <div id="student1" class="progress-card">
+
+                                <h3>Aarav - Progress Card</h3>
+
+                                <p><strong>Attendance Percentage:</strong> 91%</p>
+
                                 <table class="table table-bordered">
-                                    <thead>
+
+                                    <thead class="table-primary">
                                         <tr>
                                             <th>Subject</th>
+                                            <th>Marks</th>
                                             <th>Grade</th>
                                         </tr>
                                     </thead>
+
                                     <tbody>
+
+                                        <tr>
+                                            <td>English</td>
+                                            <td contenteditable="false">85</td>
+                                            <td contenteditable="false">A</td>
+                                        </tr>
+
                                         <tr>
                                             <td>Math</td>
-                                            <td>A</td>
+                                            <td contenteditable="false">90</td>
+                                            <td contenteditable="false">A+</td>
                                         </tr>
+
                                         <tr>
                                             <td>Science</td>
-                                            <td>B+</td>
+                                            <td contenteditable="false">88</td>
+                                            <td contenteditable="false">A</td>
                                         </tr>
+
                                     </tbody>
+
                                 </table>
+
+                                <button class="btn btn-warning" onclick="enableEdit('student1')">
+                                    Edit
+                                </button>
+
+                                <button class="btn btn-success" onclick="saveData('student1')">
+                                    Save
+                                </button>
+
                             </div>
 
+
+
+                            <!-- STUDENT 2 -->
                             <div id="student2" class="progress-card">
-                                <h3> Gowthami - Progress Card</h3>
-                                <p><strong>Grade:</strong> 8</p>
-                                <p><strong>Semester:</strong> 2</p>
+
+                                <h3>Diya - Progress Card</h3>
+
+                                <p><strong>Attendance Percentage:</strong> 94%</p>
+
                                 <table class="table table-bordered">
-                                    <thead>
+
+                                    <thead class="table-primary">
                                         <tr>
                                             <th>Subject</th>
+                                            <th>Marks</th>
                                             <th>Grade</th>
                                         </tr>
                                     </thead>
+
                                     <tbody>
+
+                                        <tr>
+                                            <td>English</td>
+                                            <td contenteditable="false">80</td>
+                                            <td contenteditable="false">A</td>
+                                        </tr>
+
                                         <tr>
                                             <td>Math</td>
-                                            <td>B</td>
+                                            <td contenteditable="false">86</td>
+                                            <td contenteditable="false">A</td>
                                         </tr>
+
                                         <tr>
                                             <td>Science</td>
-                                            <td>A</td>
+                                            <td contenteditable="false">84</td>
+                                            <td contenteditable="false">A</td>
                                         </tr>
+
                                     </tbody>
+
                                 </table>
+
+                                <button class="btn btn-warning" onclick="enableEdit('student2')">
+                                    Edit
+                                </button>
+
+                                <button class="btn btn-success" onclick="saveData('student2')">
+                                    Save
+                                </button>
+
                             </div>
 
-                            <div id="student3" class="progress-card">
-                                <h3> Anu - Progress Card</h3>
-                                <p><strong>Grade:</strong> 6</p>
-                                <p><strong>Semester:</strong> 1</p>
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>Subject</th>
-                                            <th>Grade</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Math</td>
-                                            <td>C+</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Science</td>
-                                            <td>B</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <div id="student4" class="progress-card">
-                                <h3> Chinni - Progress Card</h3>
-                                <p><strong>Grade:</strong> 6</p>
-                                <p><strong>Semester:</strong> 1</p>
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>Subject</th>
-                                            <th>Grade</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Math</td>
-                                            <td>C+</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Science</td>
-                                            <td>B</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-
-                            <div id="student5" class="progress-card">
-                                <h3> Jyoshna - Progress Card</h3>
-                                <p><strong>Grade:</strong> 6</p>
-                                <p><strong>Semester:</strong> 1</p>
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>Subject</th>
-                                            <th>Grade</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Math</td>
-                                            <td>C+</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Science</td>
-                                            <td>B</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!-- Add more progress-card divs as needed -->
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -461,13 +667,71 @@
     <script src="js/main.js"></script>
 
 
-    <script>
+    <!-- <script>
         function showStudent(id) {
             document.querySelectorAll('.progress-card').forEach(card => {
                 card.classList.remove('active');
             });
             document.getElementById(id).classList.add('active');
         }
+    </script> -->
+
+    <script>
+
+        function showClass(classId) {
+
+            document.querySelectorAll('.student-group').forEach(group => {
+                group.style.display = 'none';
+            });
+
+            document.getElementById(classId).style.display = 'block';
+
+            document.querySelectorAll('.progress-card').forEach(card => {
+                card.classList.remove('active');
+            });
+
+            document.getElementById('defaultMessage').style.display = 'block';
+        }
+
+
+
+        function showStudent(studentId) {
+
+            document.getElementById('defaultMessage').style.display = 'none';
+
+            document.querySelectorAll('.progress-card').forEach(card => {
+                card.classList.remove('active');
+            });
+
+            document.getElementById(studentId).classList.add('active');
+        }
+
+
+
+        function enableEdit(studentId) {
+
+            let cells = document.querySelectorAll('#' + studentId + ' td[contenteditable]');
+
+            cells.forEach(cell => {
+                cell.contentEditable = true;
+                cell.style.backgroundColor = '#fff3cd';
+            });
+        }
+
+
+
+        function saveData(studentId) {
+
+            let cells = document.querySelectorAll('#' + studentId + ' td[contenteditable]');
+
+            cells.forEach(cell => {
+                cell.contentEditable = false;
+                cell.style.backgroundColor = '';
+            });
+
+            alert("Student data saved successfully!");
+        }
+
     </script>
 </body>
 
